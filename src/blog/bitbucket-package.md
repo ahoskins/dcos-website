@@ -40,13 +40,13 @@ Let's go ahead and create it in the most basic way.
 }
 ```
 
-The `packagingVersion` field specifies the version of universe package spec to adhere to.  The two available version are `2.0` or `3.0`. 
+The `packagingVersion` field specifies the version of universe package spec to adhere to.  The two available versions are `2.0` or `3.0`. 
 See the [schema](https://github.com/mesosphere/universe/tree/version-3.x/repo/meta/schema) on Github for details.
 
 ## Step Two: resource.json
 
 This file declares all the externally hosted assets the package will need &mdash; things like docker containers, png images, etc.  
-In our case, we want our Bitbucket package to have an icon and we will also want to use a pre-existing Bitbucket container.
+In our case, we want our Bitbucket package to have an icon and we will also want to use a pre-existing [Bitbucket container](https://hub.docker.com/r/atlassian/bitbucket-server/).
 
 ```javascript
 {
@@ -64,8 +64,6 @@ In our case, we want our Bitbucket package to have an icon and we will also want
   }
 }
 ```
-
-We found this container on [Docker Hub](https://hub.docker.com/r/atlassian/bitbucket-server/).
 The png images sizes should be 48x48, 96x96, and 256x256, respectively for small, medium, and large.
 
 ## Step Three: config.json
